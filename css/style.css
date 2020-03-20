@@ -882,6 +882,12 @@ body {
   padding: 75px 0px 125px 0px;
 }
 
+@media screen and (max-width: 767px) {
+  .services {
+    padding: 50px 0px 50px 0px;
+  }
+}
+
 .services .container .title {
   font-size: 60px;
   font-weight: 600;
@@ -1052,6 +1058,12 @@ body {
   padding: 125px 0px 125px 0px;
 }
 
+@media screen and (max-width: 767px) {
+  .portfolio {
+    padding: 50px 0px 50px 0px;
+  }
+}
+
 .portfolio .title {
   font-size: 60px;
   font-weight: 600;
@@ -1149,6 +1161,12 @@ body {
   padding: 15px 15px;
 }
 
+@media screen and (max-width: 767px) {
+  .portfolio .slider-portfolio .slider-item img {
+    padding: 5px 5px;
+  }
+}
+
 .portfolio .slider-portfolio .slick-list {
   overflow: hidden;
 }
@@ -1215,6 +1233,12 @@ body {
 .feedbacks {
   padding: 120px 0px 60px 0px;
   background-color: #2c2c2c;
+}
+
+@media screen and (max-width: 767px) {
+  .feedbacks {
+    padding: 50px 0px 50px 0px;
+  }
 }
 
 .feedbacks .container .row {
