@@ -553,7 +553,9 @@ body {
 
 .services {
   padding: 75px 0px 125px 0px;
-
+    @media screen and (max-width: 767px) {
+       padding: 50px 0px 50px 0px;
+      }
   .container {
     .title {
       font-size: 60px;
@@ -667,7 +669,7 @@ body {
         .block-img {
           position: relative;
           max-width: 762px;
-          min-height: 441px;
+          min-height: auto;
           background-color: #282828;
 
           img {
@@ -685,6 +687,9 @@ body {
 
 .portfolio {
   padding: 125px 0px 125px 0px;
+@media screen and (max-width: 767px) {
+       padding: 50px 0px 50px 0px;
+      }
   .title {
     font-size: 60px;
     font-weight: 600;
@@ -762,6 +767,9 @@ body {
         display: block;
         max-width: 100%;
         padding: 15px 15px;
+ @media screen and (max-width: 767px) {
+       padding: 5px 5px;
+       }
       }
     }
     .slick-list {
@@ -825,7 +833,9 @@ body {
 .feedbacks {
   padding: 120px 0px 60px 0px;
   background-color: rgba(44, 44, 44, 1);
-
+  @media screen and (max-width: 767px) {
+       padding: 50px 0px 50px 0px;
+      }
   .container {
     .row {
       display: -ms-flexbox;
