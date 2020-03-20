@@ -1033,7 +1033,7 @@ body {
 .services .container .row .col-9 .block-img {
   position: relative;
   max-width: 762px;
-  min-height: 441px;
+  min-height: auto;
   background-color: #282828;
 }
 
