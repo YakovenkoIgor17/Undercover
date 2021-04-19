@@ -162,7 +162,6 @@ body {
 @media screen and (max-width: 991px) {
   .header .header__menu .nav-list {
     text-align: center;
-    padding: 144px 0px 0px 0px;
   }
 }
 
