@@ -7,15 +7,26 @@ $color-2: #b4b4b4;
 html {
 	overflow-x: hidden;
 }
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	&._loaded {
+	}
+}
 body {
 	background-color: rgba(40, 40, 40, 1);
+	&._lock {
+		overflow: hidden;
+	}
 }
-
 .container {
 	max-width: 1530px;
 	padding: 0 15px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 }
 
 .header {
@@ -41,7 +52,6 @@ body {
 			margin: auto;
 			@media screen and (max-width: 767px) {
 				width: 265px;
-
 			}
 		}
 	}
@@ -366,7 +376,8 @@ body {
 		min-height: 84px;
 		.header__burger-bord {
 			margin-left: auto;
-			position: relative;
+			position: fixed;
+			right: 100px;
 			z-index: 8;
 			width: 82px;
 			height: 82px;
@@ -403,7 +414,9 @@ body {
 			@media screen and (max-width: 991px) {
 				border: 1px solid #454545;
 				display: block;
-				position: relative;
+				position: fixed;
+				right: 20px;
+				top: 20px;
 				width: 50px;
 				height: 50px;
 				z-index: 8;
@@ -444,8 +457,8 @@ body {
 	.header__burger-bord.active {
 		&:before {
 			transform: rotate(45deg);
-			top: 42px;
-			left: 12px;
+			top: 40px;
+			left: 15px;
 			@media screen and (max-width: 991px) {
 				top: 23px;
 				left: 7px;
@@ -454,8 +467,8 @@ body {
 
 		&:after {
 			transform: rotate(-45deg);
-			top: 42px;
-			left: 12px;
+			top: 40px;
+			left: 15px;
 			@media screen and (max-width: 991px) {
 				top: 23px;
 				left: 7px;
@@ -576,6 +589,7 @@ body {
 			flex-wrap: wrap;
 			margin-right: -15px;
 			margin-left: -15px;
+			justify-content: center;
 			@media (max-width: 568px) {
 				flex-direction: column;
 			}
@@ -681,12 +695,59 @@ body {
 					}
 				}
 			}
+			#section04 a {
+				color: $color-2;
+				font-size: 20px;
+				text-transform: uppercase;
+				text-align: center;
+				max-width: 100%;
+				display: block;
+				position: relative;
+				margin-top: 60px;
+			}
+			#section04 a span {
+				position: absolute;
+				top: 80%;
+				left: 50%;
+				width: 24px;
+				height: 24px;
+				margin-left: -12px;
+				border-left: 1px solid $color-2;
+				border-bottom: 1px solid $color-2;
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+				-webkit-animation: sdb04 2s infinite;
+				animation: sdb04 2s infinite;
+				box-sizing: border-box;
+			}
+			@-webkit-keyframes sdb04 {
+				0% {
+					-webkit-transform: rotate(-45deg) translate(0, 0);
+				}
+				20% {
+					-webkit-transform: rotate(-45deg) translate(-10px, 10px);
+				}
+				40% {
+					-webkit-transform: rotate(-45deg) translate(0, 0);
+				}
+			}
+			@keyframes sdb04 {
+				0% {
+					transform: rotate(-45deg) translate(0, 0);
+				}
+				20% {
+					transform: rotate(-45deg) translate(-10px, 10px);
+				}
+				40% {
+					transform: rotate(-45deg) translate(0, 0);
+				}
+			}
 		}
 	}
 }
 
 .portfolio {
-	padding: 125px 0px 125px 0px;
+	padding: 20px 0px 125px 0px;
 	@media screen and (max-width: 767px) {
 		padding: 50px 0px 50px 0px;
 	}
@@ -828,10 +889,57 @@ body {
 			}
 		}
 	}
+	#section04 a {
+		color: $color-2;
+		font-size: 20px;
+		text-transform: uppercase;
+		text-align: center;
+		max-width: 100%;
+		display: block;
+		position: relative;
+		margin-top: 15px;
+	}
+	#section04 a span {
+		position: absolute;
+		top: 80%;
+		left: 50%;
+		width: 24px;
+		height: 24px;
+		margin-left: -12px;
+		border-left: 1px solid $color-2;
+		border-bottom: 1px solid $color-2;
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		-webkit-animation: sdb04 2s infinite;
+		animation: sdb04 2s infinite;
+		box-sizing: border-box;
+	}
+	@-webkit-keyframes sdb04 {
+		0% {
+			-webkit-transform: rotate(-45deg) translate(0, 0);
+		}
+		20% {
+			-webkit-transform: rotate(-45deg) translate(-10px, 10px);
+		}
+		40% {
+			-webkit-transform: rotate(-45deg) translate(0, 0);
+		}
+	}
+	@keyframes sdb04 {
+		0% {
+			transform: rotate(-45deg) translate(0, 0);
+		}
+		20% {
+			transform: rotate(-45deg) translate(-10px, 10px);
+		}
+		40% {
+			transform: rotate(-45deg) translate(0, 0);
+		}
+	}
 }
 
 .feedbacks {
-	padding: 120px 0px 60px 0px;
+	padding: 30px 0px 60px 0px;
 	background-color: rgba(44, 44, 44, 1);
 	@media screen and (max-width: 767px) {
 		padding: 50px 0px 50px 0px;

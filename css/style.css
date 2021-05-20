@@ -30,6 +30,10 @@ aside {
   display: block;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
@@ -97,15 +101,31 @@ html {
   overflow-x: hidden;
 }
 
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 body {
   background-color: #282828;
+}
+
+body._lock {
+  overflow: hidden;
 }
 
 .container {
   max-width: 1530px;
   padding: 0 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .header {
@@ -659,7 +679,8 @@ body {
 
 .header .header__burger .header__burger-bord {
   margin-left: auto;
-  position: relative;
+  position: fixed;
+  right: 100px;
   z-index: 8;
   width: 82px;
   height: 82px;
@@ -705,7 +726,9 @@ body {
   .header .header__burger .header__burger-bord {
     border: 1px solid #454545;
     display: block;
-    position: relative;
+    position: fixed;
+    right: 20px;
+    top: 20px;
     width: 50px;
     height: 50px;
     z-index: 8;
@@ -749,8 +772,8 @@ body {
 .header .header__burger-bord.active:before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  top: 42px;
-  left: 12px;
+  top: 40px;
+  left: 15px;
 }
 
 @media screen and (max-width: 991px) {
@@ -763,8 +786,8 @@ body {
 .header .header__burger-bord.active:after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  top: 42px;
-  left: 12px;
+  top: 40px;
+  left: 15px;
 }
 
 @media screen and (max-width: 991px) {
@@ -911,6 +934,9 @@ body {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 568px) {
@@ -1053,8 +1079,63 @@ body {
   }
 }
 
+.services .container .row #section04 a {
+  color: #b4b4b4;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 100%;
+  display: block;
+  position: relative;
+  margin-top: 60px;
+}
+
+.services .container .row #section04 a span {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #b4b4b4;
+  border-bottom: 1px solid #b4b4b4;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb04 2s infinite;
+  animation: sdb04 2s infinite;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb04 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+}
+
+@keyframes sdb04 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+            transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+            transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+            transform: rotate(-45deg) translate(0, 0);
+  }
+}
+
 .portfolio {
-  padding: 125px 0px 125px 0px;
+  padding: 20px 0px 125px 0px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1229,8 +1310,63 @@ body {
   color: #b69b67;
 }
 
+.portfolio #section04 a {
+  color: #b4b4b4;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 100%;
+  display: block;
+  position: relative;
+  margin-top: 15px;
+}
+
+.portfolio #section04 a span {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #b4b4b4;
+  border-bottom: 1px solid #b4b4b4;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb04 2s infinite;
+  animation: sdb04 2s infinite;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb04 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+}
+
+@keyframes sdb04 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+            transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+            transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+            transform: rotate(-45deg) translate(0, 0);
+  }
+}
+
 .feedbacks {
-  padding: 120px 0px 60px 0px;
+  padding: 30px 0px 60px 0px;
   background-color: #2c2c2c;
 }
 
