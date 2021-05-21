@@ -118,7 +118,7 @@ body {
   background-color: #282828;
 }
 
-body._lock {
+body.lock {
   overflow: hidden;
 }
 
